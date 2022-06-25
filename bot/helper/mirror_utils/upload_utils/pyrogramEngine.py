@@ -11,7 +11,7 @@ from bot.helper.ext_utils.bot_utils import get_readable_file_size
 
 LOGGER = getLogger(__name__)
 getLogger("pyrogram").setLevel(WARNING)
-
+mx = ["mkvcinemas", "mkvCinemas", "HDHub4u", "Pahe", "PrivatemovieZ"]
 VIDEO_SUFFIXES = ("MKV", "MP4", "MOV", "WMV", "3GP", "MPG", "WEBM", "AVI", "FLV", "M4V", "GIF")
 AUDIO_SUFFIXES = ("MP3", "M4A", "M4B", "FLAC", "WAV", "AIF", "OGG", "AAC", "DTS", "MID", "AMR", "MKA")
 IMAGE_SUFFIXES = ("JPG", "JPX", "PNG", "WEBP", "CR2", "TIF", "BMP", "JXR", "PSD", "ICO", "HEIC", "JPEG")
@@ -63,7 +63,9 @@ class TgUploader:
 
     def __upload_file(self, up_path, file_, dirpath):
         if CUSTOM_FILENAME is not None:
-            cap_mono = f"{CUSTOM_FILENAME} <code>{file_}</code>"
+            for nx in mx:
+                file_=file_.replace.(nx,"")
+            cap_mono = f"{CUSTOM_FILENAME}<code>{file_}</code>"
             file_ = f"{CUSTOM_FILENAME} {file_}"
             new_path = ospath.join(dirpath, file_)
             osrename(up_path, new_path)
