@@ -16,7 +16,7 @@ VIDEO_SUFFIXES = ("MKV", "MP4", "MOV", "WMV", "3GP", "MPG", "WEBM", "AVI", "FLV"
 AUDIO_SUFFIXES = ("MP3", "M4A", "M4B", "FLAC", "WAV", "AIF", "OGG", "AAC", "DTS", "MID", "AMR", "MKA")
 IMAGE_SUFFIXES = ("JPG", "JPX", "PNG", "WEBP", "CR2", "TIF", "BMP", "JXR", "PSD", "ICO", "HEIC", "JPEG")
 
-mx = ["mkvcinemas", "mkvCinemas", "HDHub4u"]
+mx = ["mkvcinemas", "mkvCinemas", "HDHub4u", "Pahe", "PrivatemovieZ]
 class TgUploader:
 
     def __init__(self, name=None, listener=None):
