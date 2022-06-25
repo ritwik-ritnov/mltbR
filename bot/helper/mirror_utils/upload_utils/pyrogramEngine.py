@@ -64,7 +64,7 @@ class TgUploader:
     def __upload_file(self, up_path, file_, dirpath):
         if CUSTOM_FILENAME is not None:
             for nx in mx:
-                file_=file_.replace.(nx,"")
+                file_=file_.replace(nx,"")
             cap_mono = f"{CUSTOM_FILENAME}<code>{file_}</code>"
             file_ = f"{CUSTOM_FILENAME} {file_}"
             new_path = ospath.join(dirpath, file_)
