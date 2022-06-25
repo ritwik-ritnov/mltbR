@@ -15,7 +15,6 @@ getLogger("pyrogram").setLevel(WARNING)
 VIDEO_SUFFIXES = ("MKV", "MP4", "MOV", "WMV", "3GP", "MPG", "WEBM", "AVI", "FLV", "M4V", "GIF")
 AUDIO_SUFFIXES = ("MP3", "M4A", "M4B", "FLAC", "WAV", "AIF", "OGG", "AAC", "DTS", "MID", "AMR", "MKA")
 IMAGE_SUFFIXES = ("JPG", "JPX", "PNG", "WEBP", "CR2", "TIF", "BMP", "JXR", "PSD", "ICO", "HEIC", "JPEG")
-
 mx = ["mkvcinemas", "mkvCinemas", "HDHub4u", "Pahe", "PrivatemovieZ"]
 class TgUploader:
 
@@ -65,9 +64,9 @@ class TgUploader:
         if CUSTOM_FILENAME is not None:
             for nx in mx:
                 file_=file_.replace.(nx,"")
-            filex = f"{CUSTOM_FILENAME}{file_}"
+            file_ = f"{CUSTOM_FILENAME}{file_}"
             cap_mono = f"<code>{file_}</code>"
-            new_path = ospath.join(dirpath, filex)
+            new_path = ospath.join(dirpath, file_)
             osrename(up_path, new_path)
             up_path = new_path
         else:
