@@ -57,12 +57,6 @@ try:
     TORRENT_TIMEOUT = int(TORRENT_TIMEOUT)
 except:
     TORRENT_TIMEOUT = None
-
-mx = ["mkvcinemas", "mkvCinemas", "HDHub4u", "Pahe", "PrivatemovieZ"]
-TXX = getConfig('TXX')
-TXXY = TXX.split()
-for TXX != "":
-  mx.extend(TXXY)
   
       
 PORT = environ.get('PORT')
