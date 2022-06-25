@@ -58,6 +58,10 @@ try:
 except:
     TORRENT_TIMEOUT = None
 
+mx = ["mkvcinemas", "mkvCinemas", "HDHub4u", "Pahe", "PrivatemovieZ"]
+TXX = getConfig('TXX')
+for TXX != "":
+      
 PORT = environ.get('PORT')
 Popen([f"gunicorn web.wserver:app --bind 0.0.0.0:{PORT}"], shell=True)
 srun(["last-api", "-d", "--profile=."])
