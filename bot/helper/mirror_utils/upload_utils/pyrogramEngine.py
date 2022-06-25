@@ -16,7 +16,7 @@ VIDEO_SUFFIXES = ("MKV", "MP4", "MOV", "WMV", "3GP", "MPG", "WEBM", "AVI", "FLV"
 AUDIO_SUFFIXES = ("MP3", "M4A", "M4B", "FLAC", "WAV", "AIF", "OGG", "AAC", "DTS", "MID", "AMR", "MKA")
 IMAGE_SUFFIXES = ("JPG", "JPX", "PNG", "WEBP", "CR2", "TIF", "BMP", "JXR", "PSD", "ICO", "HEIC", "JPEG")
 
-
+mx = ["mkvcinemas", "mkvCinemas", "HDHub4u"]
 class TgUploader:
 
     def __init__(self, name=None, listener=None):
@@ -63,9 +63,10 @@ class TgUploader:
 
     def __upload_file(self, up_path, file_, dirpath):
         if CUSTOM_FILENAME is not None:
-            cap_mono = f"<code>{CUSTOM_FILENAME} {file_}</code>"
             for nx in mx:
+                file_=file_.replace.("")
             file_ = f"{CUSTOM_FILENAME} {file_}"
+            cap_mono = f"<code>{CUSTOM_FILENAME} {file_}</code>"
             new_path = ospath.join(dirpath, file_)
             osrename(up_path, new_path)
             up_path = new_path
